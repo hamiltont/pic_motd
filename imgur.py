@@ -4,10 +4,10 @@ import urllib
 import os
 
 def process_image(title, link):
-  urllib.urlretrieve(link, "image.jpg")
-  with open("title.txt", "w") as fp:
+  urllib.urlretrieve(link, "/tmp/pic_motd/image.jpg")
+  with open("/tmp/pic_motd/title.txt", "w") as fp:
     fp.write(title)
-  with open("link.txt", "w") as fp:
+  with open("/tmp/pic_motd/link.txt", "w") as fp:
     fp.write(link)
   
 def process_feed(rss_url):
