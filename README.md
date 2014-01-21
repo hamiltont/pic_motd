@@ -18,6 +18,7 @@ Requirements: python2.7, lxc-docker (optional)
 ### Usage With Docker
 
 I run this series of commands using cron:
+
     # JOB=$(sudo docker run -d -t -e IMGUR_RSS=http://imgur.com/r/coffee/rss -v `pwd`:/root -w=/root hamiltont/motd++:latest /bin/bash /root/build_motd.sh)
     $ sudo docker wait $JOB && sudo mv image.txt /etc/issue.net
 
